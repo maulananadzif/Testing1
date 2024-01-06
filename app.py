@@ -100,7 +100,7 @@ y = df_clean['target']
 smote = SMOTE(random_state=42)
 X, y = smote.fit_resample(X, y)
 
-model = pickle.load(open("model/xgb_model.pkl", 'rb')) # Memuat model XGBoost yang telah dilatih sebelumnya
+model = pickle.load(open("model/xgb_oversample_model.pkl", 'rb')) # Memuat model XGBoost yang telah dilatih sebelumnya
 
 y_pred = model.predict(X) # Memprediksi hasil
 
